@@ -1,0 +1,322 @@
+#header {
+  transition: all 0.5s;
+  background: #fff;
+  z-index: 997;
+  padding: 15px 0;
+  border-bottom: 1px solid #e6f2fb;
+}
+
+#header.header-scrolled {
+  border-color: #fff;
+  box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
+}
+
+#header .logo {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+  color: #25ca7f;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+@media (max-width: 992px) {
+  #header .logo {
+    font-size: 28px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 14px;
+  color: #016d2a;
+  white-space: nowrap;
+  transition: 0.1s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #25ca7f;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  background:#25ca7f;
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  color: #fff;
+  background: #21a168;
+}
+
+/**
+* Mobile Navigation Bar
+*/
+.mobile-nav-toggle {
+  color:#4ab987;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #124d32c2;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #016d2a;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color:#25ca7f;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+  color: #25ca7f;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+  display: block;
+}
+
+
+
+/*--------------------------------------------------------------
+# Pricing
+--------------------------------------------------------------*/
+.pricing .box {
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    background: #fefefe;
+    box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
+  }
+  
+  .pricing .box h3 {
+    font-weight: 400;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  .pricing .box h4 {
+    font-size: 40px;
+    color: #FFA629;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .pricing .box h4 sup {
+    font-size: 20px;
+    top: -15px;
+    left: -3px;
+  }
+  
+  .pricing .box h4 span {
+    color: #bababa;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  
+  .pricing .box ul {
+    padding: 0;
+    list-style: none;
+    color: #000000;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  
+  .pricing .box ul li {
+    padding-bottom: 16px;
+  }
+  
+  .pricing .box ul .na {
+    color: #ccc;
+    text-decoration: line-through;
+  }
+  
+  .pricing .box .btn-wrap {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .pricing .box .btn-buy {
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 4px;
+    color: #000000;
+    transition: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 2px solid #000000;
+  }
+  
+  .pricing .box .btn-buy:hover {
+    background: #FFA629;
+    color: #ffffff;
+  }
+  
+  .pricing .featured {
+    background: #FFA629;
+  }
+  
+  .pricing .featured h3,
+  .pricing .featured h4,
+  .pricing .featured h4 span,
+  .pricing .featured ul,
+  .pricing .featured ul .na {
+    color: #000000;
+  }
+  
+  .pricing .featured .btn-wrap {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .pricing .featured .btn-buy {
+    color: #0a0707;
+    border: 2px solid #000000;
+  }
+  
+  .pricing .featured .btn-buy:hover {
+    background: #000000;
+    color: #FFA629;
+  }
+  
